@@ -9,11 +9,10 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val textView: TextView = findViewById(R.id.textview_hello)
+        val textView: TextView = findViewById(R.id.textview_count)
 
         val intent = intent
         val count: Int = intent.getIntExtra(MainActivity.EXTRA_COUNT, 0)
-        val textFormatted = String.format("Hello!\n%d", count)
-        textView.text = textFormatted
+        textView.text = count.toString()
     }
 }

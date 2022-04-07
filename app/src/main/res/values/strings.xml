@@ -4,4 +4,5 @@
     <string name="count_initial_value">0</string>
     <string name="button_zero">0</string>
     <string name="button_label_say_hello">say hello</string>
+    <string name="hello">Hello!</string>
 </resources>
