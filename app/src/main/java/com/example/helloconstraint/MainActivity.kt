@@ -1,5 +1,6 @@
 package com.example.helloconstraint
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        const val EXTRA_COUNT = "com.example.helloconstraint.COUNT"
+    }
 
     private var mCount: Int = 0
     private var mShowCount: TextView? = null
@@ -26,6 +31,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startSecActivity(view: View) {
+        val intent = Intent(this, SecondActivity::class.java)
+        intent.putExtra(EXTRA_COUNT, mCount)
+        startActivity(intent)
     }
 
     private fun showCount() {

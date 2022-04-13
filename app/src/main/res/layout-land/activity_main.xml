@@ -43,6 +43,7 @@
         android:backgroundTint="@color/design_default_color_primary"
         android:text="@string/button_label_say_hello"
         android:textColor="@color/white"
+        android:onClick="startSecActivity"
         app:layout_constraintBottom_toTopOf="@+id/button_count"
         app:layout_constraintEnd_toEndOf="@id/vertical"
         app:layout_constraintHorizontal_bias="0.5"
